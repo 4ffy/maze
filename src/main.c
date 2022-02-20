@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
     if (!w || !h)
     {
         fprintf(stderr, "Usage: %s width height\n\n", argv[0]);
-        return EXIT_SUCCESS;
+        return EXIT_FAILURE;
     }
 
     maze_t* maze = initMaze(w, h);
