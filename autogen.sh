@@ -1,9 +1,3 @@
 #!/bin/sh
+autoreconf --install
 
-aclocal
-autoheader
-automake -a
-autoconf
-automake -a
-
-./configure $@
