@@ -1,11 +1,10 @@
 /**
  * @file maze.h
- * @author Cameron Norton (cameron.norton@gmail.com)
+ * @author 4ffy
  * @brief Depth-first maze generation algorithms.
  * @version 1.0
  * @date 2022-02-17
- * @copyright Copyright (c) 2022 Cameron Norton
- * 
+ * @copyright Copyright (c) 2022 4ffy
  */
 
 #include <stdlib.h>
@@ -19,12 +18,13 @@
 
 
 
-typedef struct maze maze_t;
-struct maze {
+typedef struct
+{
     size_t** data; /**< Array of cells. */
     size_t width;  /**< Width of array. */
     size_t height; /**< Height of array. */
-};
+}
+maze_t;
 
 
 
