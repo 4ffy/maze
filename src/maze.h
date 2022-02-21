@@ -2,7 +2,7 @@
  * @file maze.h
  * @author 4ffy
  * @brief Depth-first maze generation algorithms.
- * @version 1.0
+ * @version 1.0.0
  * @date 2022-02-17
  * @copyright Copyright (c) 2022 4ffy
  */
