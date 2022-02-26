@@ -1,9 +1,31 @@
+/**
+ * @file maze.c
+ * @author 4ffy
+ * @version 1.0.0
+ * @date 2022-02-26
+ * 
+ * @copyright Copyright (c) 2022 4ffy
+ *
+ * Permission to use, copy, modify, and/or distribute this software for any
+ * purpose with or without fee is hereby granted.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+ * SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+ * IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ * 
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <wchar.h>
 #include "maze.h"
 
-//Shuffle a list in-place.
+
+
 void shuffle(size_t length, int* list)
 {
     int temp;
@@ -18,7 +40,7 @@ void shuffle(size_t length, int* list)
     }
 }
 
-//Allocate memory for a maze.
+
 maze_t* initMaze(size_t width, size_t height)
 {
     maze_t* maze = malloc(sizeof(maze_t));
@@ -52,7 +74,7 @@ maze_t* initMaze(size_t width, size_t height)
 }
 
 
-//Free maze memory.
+
 void freeMaze(maze_t* maze)
 {
     if (!maze) return;
@@ -66,7 +88,6 @@ void freeMaze(maze_t* maze)
 
 
 
-//Reset a maze to all 0s.
 void clearMaze(maze_t* maze)
 {
     for (size_t i = 0; i < maze->width; i++)
@@ -78,7 +99,6 @@ void clearMaze(maze_t* maze)
 
 
 
-//Perform a walk from a starting position.
 void walk(size_t x, size_t y, maze_t* maze)
 {
     maze->data[x][y] |= VISIT_FLAG;
@@ -127,7 +147,6 @@ void walk(size_t x, size_t y, maze_t* maze)
 
 
 
-//Choose a starting point and make a maze.
 void makeMaze(maze_t* maze)
 {
     clearMaze(maze);
@@ -138,7 +157,6 @@ void makeMaze(maze_t* maze)
 
 
 
-//Print a maze to the screen.
 void printMaze(maze_t* maze)
 {
     for (size_t j = 0; j < maze->height; j++)
@@ -161,7 +179,6 @@ void printMaze(maze_t* maze)
 
 
 
-//Print maze values as integers.
 void printDebug(maze_t * maze)
 {
     for (size_t j = 0; j < maze->height; j++)

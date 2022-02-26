@@ -5,6 +5,18 @@
  * @version 1.0.0
  * @date 2022-02-17
  * @copyright Copyright (c) 2022 4ffy
+ *
+ * Permission to use, copy, modify, and/or distribute this software for any
+ * purpose with or without fee is hereby granted.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+ * SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+ * IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ *
  */
 
 #include <stdlib.h>
@@ -12,16 +24,19 @@
 #ifndef MAZE_H
 #define MAZE_H
 
-#define VISIT_FLAG 1 /**< Flag if cell has been visited. */
+#define VISIT_FLAG 1 /**< Flag if cell has been visited.           */
 #define NORTH_FLAG 2 /**< Flag if cell has a passage to the north. */
-#define WEST_FLAG  4 /**< Flag if cell has a passage to the west. */
+#define WEST_FLAG  4 /**< Flag if cell has a passage to the west.  */
 
 
 
+/**
+ * Maze container type.
+ */
 typedef struct
 {
-    size_t** data; /**< Array of cells. */
-    size_t width;  /**< Width of array. */
+    size_t** data; /**< Array of cells.  */
+    size_t width;  /**< Width of array.  */
     size_t height; /**< Height of array. */
 }
 maze_t;
