@@ -1,9 +1,6 @@
 /**
  * @file maze.c
  * @author 4ffy
- * @version 1.0.0
- * @date 2022-02-26
- * 
  * @copyright Copyright (c) 2022 4ffy
  *
  * Permission to use, copy, modify, and/or distribute this software for any
