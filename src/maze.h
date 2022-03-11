@@ -1,8 +1,8 @@
 /**
  * @file maze.h
- * @author 4ffy
+ * @author Cameron Norton
  * @brief Depth-first maze generation algorithms.
- * @copyright Copyright (c) 2022 4ffy
+ * @copyright Copyright (c) 2022 Cameron Norton
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted.
